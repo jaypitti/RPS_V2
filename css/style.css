@@ -1,0 +1,86 @@
+html{
+  font-family: 'Aclonica';
+  background-color: black;
+  margin: 0;
+}
+body {
+  background-color: lightgrey;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  border: 3px solid #C0C0C0;
+}
+.container{
+  background: #C0C0C0;
+  padding-top: 20px;
+  margin: 0px;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  max-height: 50px;
+}
+.choice{
+  text-align: center;
+  margin: 40px;
+  width: 30%;
+  padding: 10px;
+  transition: all .5s ease-in-out;
+}
+.choice:hover{
+  transform: scale(1.4);
+}
+ul{
+  margin: 0;
+}
+.win {
+  list-style: none;
+  margin-top: 20px;
+  height: 120px;
+  max-height: 120px;
+}
+.win li {
+  font-size: 45px;
+  display:inline-block;
+  margin-right:60px;
+}
+.track li {
+  font-size: 15px;
+  display:block;
+  text-align: left;
+}
+
+#rock{
+  width: 200px;
+  height: 200px;
+  background: url('../images/rock.gif') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+}
+#paper{
+  width: 200px;
+  height: 200px;
+  background: url('../images/paper.gif') no-repeat;
+  background-size: contain;
+  background-color: black;
+}
+#scissor{
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  background: url('../images/scissor.gif') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+}
+button{
+  border-radius: 100%;
+  outline:none;
+  transition: all .5s ease-in-out;
+}
+button:hover{
+  border-radius: 60px;
+}
