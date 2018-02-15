@@ -25,13 +25,24 @@ function compare() {
     result = 'Tie'
     $('#list').append('<li>'+'Tie'+'</li>');
     $('button').css({'border':'15px solid yellow'})
-  } else if (computerIndex === options.length - 1 && userIndex == 0 || userIndex > computerIndex) {
+  }else if(userIndex === options.length - 1 && computerIndex === 0 ){
+    $('#list').empty()
+    result = 'Lose';
+    $('button').css({'border':'15px solid red'})
+    $('#list').append('<li>'+'You Lose'+'</li>');
+  }else if (computerIndex === options.length - 1 && userIndex == 0) {
     $('#list').empty()
     record[user + 'Wins']++
     result = 'Win'
     $('button').css({'border':'15px solid green'})
     $('#list').append('<li>'+'You Win'+'</li>');
-  }else {
+  }else if (userIndex > computerIndex) {
+    $('#list').empty()
+    record[user + 'Wins']++
+    result = 'Win'
+    $('button').css({'border':'15px solid green'})
+    $('#list').append('<li>'+'You Win'+'</li>');
+  }else{
     $('#list').empty()
     result = 'Lose';
     $('button').css({'border':'15px solid red'})
@@ -44,10 +55,10 @@ function startGame(e) {//(e) represents the input
   record[user]++ //adding 1 to the stats of the picked id
   computer = computerChoice(); // choice is equal to returned value of computerChoice() function
   compare(); //calling compare to user and computer
-  calcTotals();
+  calculate();
 }
 
-function calcTotals() {
+function calculate() {
   $('#rockWL').text(record.rockWins + "/" + record.rock);
   $('#paperWL').text(record.paperWins + "/" + record.paper);
   $('#scissorWL').text(record.scissorWins + "/" + record.scissor);
